@@ -1,0 +1,12 @@
+# Banco de preguntas (cierre opcional). Formato: clave|pregunta|respuesta
+# clave = dificultad * 100 + identificador. Orden de inserción del enunciado.
+201|¿El inorden de un árbol de búsqueda sale ordenado?|sí
+302|¿La búsqueda por niveles garantiza el mínimo si los pesos difieren?|no
+101|¿Cuánto es 2 + 2?|4
+203|¿Kruskal detecta ciclos con Union-Find?|sí
+303|¿Un árbol completo pide cero o dos hijos en cada nodo?|sí
+102|¿El cielo despejado se ve azul?|sí
+301|¿El peso del árbol, sin contar la raíz, es n − 1?|sí
+104|¿Una hoja tiene hijos?|no
+202|¿Dijkstra tiene en cuenta los pesos?|sí
+103|¿El orden de una cola es el de llegada?|sí
