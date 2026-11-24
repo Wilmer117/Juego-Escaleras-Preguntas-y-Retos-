@@ -73,9 +73,11 @@ public class PanelJuego extends JPanel {
         super(new BorderLayout(10, 10));
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         add(crearEncabezado(), BorderLayout.NORTH);
-        add(panelTablero, BorderLayout.CENTER);
-        add(crearPanelDeControles(), BorderLayout.EAST);
-        add(crearPestanas(), BorderLayout.SOUTH);
+        add(panelTablero, BorderLayout.WEST);
+        JPanel ladoDerecho = new JPanel(new BorderLayout(10, 10));
+        ladoDerecho.add(crearPanelDeControles(), BorderLayout.WEST);
+        ladoDerecho.add(crearPestanas(), BorderLayout.CENTER);
+        add(ladoDerecho, BorderLayout.CENTER);
         iniciarCorridaDeVerificacion();
     }
 
@@ -152,13 +154,15 @@ public class PanelJuego extends JPanel {
         pestanas.addTab("Asistente IA", new JScrollPane(areaAsistente));
         pestanas.addTab("Estructuras", new JScrollPane(areaEstructuras));
         pestanas.addTab("Ranking", new JScrollPane(areaRanking));
-        pestanas.setPreferredSize(new Dimension(1000, 250));
+        pestanas.setPreferredSize(new Dimension(420, 600));
         return pestanas;
     }
 
     private static JTextArea crearArea() {
         JTextArea area = new JTextArea();
         area.setEditable(false);
+        area.setLineWrap(true);
+        area.setWrapStyleWord(true);
         area.setFont(FUENTE_MONO);
         area.setMargin(new java.awt.Insets(6, 8, 6, 8));
         return area;
